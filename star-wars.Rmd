@@ -16,8 +16,7 @@ Below we look at which 5 characters from Star Wars are the most accomplished pil
 
 ```{r table-of-most-accomplished-pilots}
 accomp_pilots <- starwars %>% 
-```suggestion
-  unnest(starwars) %>% 
+  unnest(films) %>% 
   group_by(name) %>% 
   tally() %>% 
   arrange(desc(n)) %>% 
